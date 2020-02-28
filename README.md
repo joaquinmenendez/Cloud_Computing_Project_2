@@ -1,12 +1,13 @@
 # Cloud_Computing_Project_2
-Docker Container Project
+## Docker Container Project
 
-### This is a draft
+---
+### This is a draft!!!
 
-##Create a project
+## Create a project
 > insert pictures here
 
-##Enable APIs
+## Enable APIs
 > insert pictures here
 
 
@@ -34,21 +35,19 @@ Docker Container Project
 >
 > all: install
 
-
 ## Install all the requirements
 > make all
 
 
 ## Write your app `app.py`
->>>
-import pandas as pd
-import flask
 
-#initialize
-app = Flask(__name__)
-
-#read csv
-desribe_csv = pd.read_csv(VAR).describe()
-
-print(describe_csv)
->>>
+>import flask
+>import pandas as pd
+>
+>#initialize
+>app = Flask(__name__)
+>
+>#read csv
+>desribe_csv = pd.read_csv(VAR).describe()
+>
+>print(describe_csv)

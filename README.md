@@ -18,39 +18,43 @@
 > source ./.descrive_csv/bin/activate
 
 ## Create a bucket for your project.
-#### Remove italics for your own variables. 
-> export PROJECT_NAME=*carbon-zone-269620*<br>
+#### Remove italics for your own variables
+
+> export PROJECT_NAME=*carbon-zone-269620*
+
 > gsutil mb -p $PROJECT_NAME -c standard -l *us-east1* -b on gs://*describe_csv_bucket*/
 
 ** Note : If you want to run directly from the Docker file to modify this values in the `Dockerfile` file **
 
 ## Create a `requirements.txt`
->flask==1.1.1
->pandas
+```bash
+flask==1.1.1
+pandas
+```
 
 ## Create a `Makefile`
-> install:
+```bash
+install:
+	pip install --upgrade pip &&\
+	pip install -r requirements.txt
 
->	pip install --upgrade pip &&\
-
->	pip install -r requirements.txt
->
-> all: install
+all: install
+```
 
 ## Install all the requirements
 > make all
 
 
 ## Write your app `app.py`
+```python
+import flask
+import pandas as pd
 
->import flask
+#initialize 
+app = Flask(__name__)
 
->import pandas as pd
+#read csv
+desribe_csv = pd.read_csv(VAR).describe()
 
->#initialize <br>
->app = Flask(__name__)<br>
->
->#read csv<br>
->desribe_csv = pd.read_csv(VAR).describe()<br>
->
->print(describe_csv)<br>
+print(describe_csv)
+```

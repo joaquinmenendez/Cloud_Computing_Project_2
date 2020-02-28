@@ -22,7 +22,7 @@
 > export PROJECT_NAME=*carbon-zone-269620*
 > gsutil mb -p $PROJECT_NAME -c standard -l *us-east1* -b on gs://*describe_csv_bucket*/
 
-*\ ** Note : If you want to run directly from the Docker file to modify this values in the `Dockerfile` file **
+** Note : If you want to run directly from the Docker file to modify this values in the `Dockerfile` file **
 
 ## Create a `requirements.txt`
 >flask==1.1.1

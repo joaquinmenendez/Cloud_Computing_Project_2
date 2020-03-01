@@ -3,12 +3,12 @@
 
 This is a tutorial of how to use Docker containerization. You can see a quick demostration [here.](https://youtu.be/0v3HIwOZ064)
 
-The README file contains all the instructions to build a Flask app from scratch and build a docker image to run it everywhere.
+The README file contains all the instructions to build a Flask app from scratch, build a docker image to run it everywhere and deploy this image as an app using Cloud Run Services (GCS).
 You can have access to a cloud version of this app runing on GCS [here](https://describer-ions6p5noa-ue.a.run.app).
 
 > *This is a beta version, do not upload files larger than 50 MB*
 
-The same app could be deploy using APP Engine from GCS. To see an example of how to do this se my other [repository](https://github.com/joaquinmenendez/Cloud_Computing_Project_1)
+The same app could be deploy using APP Engine from GCS. To see an example of how to do this check my other [repository](https://github.com/joaquinmenendez/Cloud_Computing_Project_1)
 
 
 ## Create a project

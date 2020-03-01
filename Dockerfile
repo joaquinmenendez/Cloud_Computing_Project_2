@@ -4,7 +4,7 @@ FROM python:3.7.3-stretch
 WORKDIR /describer
 
 # Copy source code to working directory
-COPY . app.py /describer/
+COPY . main.py /describer/
 
 # Install packages from requirements.txt
 RUN pip install --upgrade pip &&\
@@ -13,4 +13,4 @@ RUN pip install --upgrade pip &&\
 #Espose a port
 EXPOSE 8080
 
-CMD flask run --host=0.0.0.0
+CMD ["python", "main.py"]

@@ -142,3 +142,15 @@ def describe_data():
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080, debug=True)
 ```
+## Build and deploy your image to Docker Hub
+```bash
+docker build --tag=describer .
+# Set a dockerpath with user and name of the image
+dockerpath="mellijoaco/describer"
+
+# Authenticate & Tag
+echo "Docker ID and Image: $dockerpath"
+docker login && docker image tag describer  $dockerpath
+
+# Push Image
+docker image push $dockerpath 

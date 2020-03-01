@@ -166,7 +166,8 @@ docker login && docker image tag describer $dockerpath
 # Push Image
 docker image push $dockerpath 
 
-#To run the conatiner. You would need to expose a port to connect with the docker port. In this case I am using 8080 for both.
+#To run the contianer. You would need to expose a port to connect with the docker port.
+#In this case I am using 8080 for both.
 docker run -p 8080:8080 -it mellijoaco/describer bash       
 ```
 

@@ -3,17 +3,17 @@ from flask import Flask, render_template, request, flash, redirect
 import os
 from werkzeug.utils import secure_filename
 
-#initialize variables
+# initialize variables
 app = Flask(__name__)
 
-#I will need to work around this in the future. Setting basic configuration.
+# I will need to work around this in the future. Setting basic configuration.
 app.secret_key = "secret key"
 app.config['UPLOAD_FOLDER'] = './temp'
 app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024 #50 mb 
 ALLOWED_EXTENSIONS = set(['csv'])
 
 def allowed_file(filename):
-	return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route('/iris')
 def describe_iris():
@@ -79,4 +79,4 @@ def describe_data():
 
 # Useful also to visualize locally
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port=8080, debug=True)
+    app.run(host='0.0.0.0.', port=8080, debug=True)

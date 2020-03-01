@@ -1,7 +1,8 @@
 # Cloud_Computing_Project_2
 ## Docker Container Project
 
-This is a tutorial of how to use Docker containerization. You can see a quick demostration [here](https://youtu.be/0v3HIwOZ064)
+This is a tutorial of how to use Docker containerization. You can see a quick demostration [here.](https://youtu.be/0v3HIwOZ064)
+
 The README file contains all the instructions to build a Flask app from scratch and build a docker image to run it everywhere.
 The same app could be deploy using APP Engine from GCS. To see an example of how to do this se my other [repository](https://github.com/joaquinmenendez/Cloud_Computing_Project_1)
 

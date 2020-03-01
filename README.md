@@ -5,6 +5,7 @@ This is a tutorial of how to use Docker containerization. You can see a quick de
 
 The README file contains all the instructions to build a Flask app from scratch and build a docker image to run it everywhere.
 The same app could be deploy using APP Engine from GCS. To see an example of how to do this se my other [repository](https://github.com/joaquinmenendez/Cloud_Computing_Project_1)
+You can have access to the cloud version of this app [here](https://describer-ions6p5noa-ue.a.run.app)
 
 ## Create a project
 ![create_project](https://user-images.githubusercontent.com/43391630/75630460-f32acd00-5bb8-11ea-8a74-4484a66f9223.png)
@@ -173,11 +174,14 @@ docker run -p 8080:8080 -it mellijoaco/describer bash
 ```
 
 ## GCR
-You can also create an Image and upload this one to the Google Clour Repository (GCR)
+You can also create an Image and upload this one to the Google Clour Repository (GCR). 
+To do this you will need to have an `app.py` file.
 
 ```bash
+#this would take some time
 cloud builds submit --tag gcr.io/carbon-zone-269620/describer
 
 #gcloud run deploy --image gcr.io/PROJECT_ID/name --platform managed
 gcloud run deploy --image gcr.io/carbon-zone-269620/describer --platform managed
 ```
+You can have access to the cloud version [here](https://describer-ions6p5noa-ue.a.run.app)

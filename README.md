@@ -1,9 +1,15 @@
 # Cloud_Computing_Project_2
 ## Docker Container Project
 
-This is a tutorial of how to use Docker containerization. You can see a quick demostration [here](https://youtu.be/0v3HIwOZ064)
+This is a tutorial of how to use Docker containerization. You can see a quick demostration [here.](https://youtu.be/0v3HIwOZ064)
+
 The README file contains all the instructions to build a Flask app from scratch and build a docker image to run it everywhere.
+You can have access to a cloud version of this app runing on GCS [here](https://describer-ions6p5noa-ue.a.run.app).
+
+> *This is a beta version, do not upload files larger than 50 MB*
+
 The same app could be deploy using APP Engine from GCS. To see an example of how to do this se my other [repository](https://github.com/joaquinmenendez/Cloud_Computing_Project_1)
+
 
 ## Create a project
 ![create_project](https://user-images.githubusercontent.com/43391630/75630460-f32acd00-5bb8-11ea-8a74-4484a66f9223.png)
@@ -16,7 +22,7 @@ export PROJECT_NAME=carbon-zone-269620
 gsutil mb -p $PROJECT_NAME -c standard -l us-east1 -b on gs://describe_csv_bucket/
 ```
 *Note : This is not necessary. The app works using a `temp` folder inside the container.
- Only need to do this is you are going to deploy this app on App Engine*
+ Only need to do this is you are going to deploy this app on App Engine. The docker has a limited amount of space to upload files*
 
 ## Create a `requirements.txt`
 ```bash
@@ -33,14 +39,15 @@ install:
 
 all: install
 ```
+
 ## Create a virtualenv
-> virtualenv ./.descrive_csv
-
-## Activate the virtualenv
-> source ./.descrive_csv/bin/activate
-
-## Install all the requirements
-> make all
+```
+virtualenv ./.descrive_csv
+# Activate the virtualenv
+source ./.descrive_csv/bin/activate
+# Install all the requirements
+make all
+```
 
 ## Write your Docker file
 ```bash
@@ -165,16 +172,24 @@ docker login && docker image tag describer $dockerpath
 # Push Image
 docker image push $dockerpath 
 
-#To run the conatiner. You would need to expose a port to connect with the docker port. In this case I am using 8080 for both.
+#To run the contianer. You would need to expose a port to connect with the docker port.
+#In this case I am using 8080 for both.
 docker run -p 8080:8080 -it mellijoaco/describer bash       
 ```
 
 ## GCR
-You can also create an Image and upload this one to the Google Clour Repository (GCR)
+You can also create an Image and upload this one to the Google Clour Repository (GCR). 
+To do this you will need to have an `app.py` file.
+
+You would need to enable certaing options.
+
+![enable_options](https://user-images.githubusercontent.com/43391630/75631313-b1e9eb80-5bbf-11ea-849d-bac67488b5be.png)
 
 ```bash
+#this would take some time
 cloud builds submit --tag gcr.io/carbon-zone-269620/describer
 
 #gcloud run deploy --image gcr.io/PROJECT_ID/name --platform managed
 gcloud run deploy --image gcr.io/carbon-zone-269620/describer --platform managed
 ```
+You can have access to the cloud version [here](https://describer-ions6p5noa-ue.a.run.app)

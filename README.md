@@ -33,14 +33,15 @@ install:
 
 all: install
 ```
+
 ## Create a virtualenv
-> virtualenv ./.descrive_csv
-
-## Activate the virtualenv
-> source ./.descrive_csv/bin/activate
-
-## Install all the requirements
-> make all
+```
+virtualenv ./.descrive_csv
+# Activate the virtualenv
+source ./.descrive_csv/bin/activate
+# Install all the requirements
+make all
+```
 
 ## Write your Docker file
 ```bash

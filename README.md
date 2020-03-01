@@ -178,7 +178,9 @@ docker run -p 8080:8080 -it mellijoaco/describer bash
 ## GCR
 You can also create an Image and upload this one to the Google Clour Repository (GCR). 
 To do this you will need to have an `app.py` file.
+
 You would need to enable certaing options.
+
 ![enable_options](https://user-images.githubusercontent.com/43391630/75631313-b1e9eb80-5bbf-11ea-849d-bac67488b5be.png)
 
 ```bash

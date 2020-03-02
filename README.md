@@ -182,7 +182,7 @@ docker image push $dockerpath
 docker run -p 8080:8080 -it mellijoaco/describer bash   
 
 #run the flask app
-pyghon3 main.py
+python3 main.py
 ```
 
 ## GCR

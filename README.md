@@ -55,19 +55,24 @@ make all
 FROM python:3.7.3-stretch
 
 # Working Directory
+
 WORKDIR /describer
 
 # Copy source code to working directory
-COPY . app.py /describer/
+
+COPY . main.py /describer/
 
 # Install packages from requirements.txt
+
 RUN pip install --upgrade pip &&\
+
     pip install -r requirements.txt
 
 #Espose a port
+
 EXPOSE 8080
 
-CMD flask run --host=0.0.0.0
+CMD ["python", "main.py"]
 ```
 
 ## Write your app `main.py`
@@ -172,15 +177,18 @@ docker login && docker image tag describer $dockerpath
 # Push Image
 docker image push $dockerpath 
 
-#To run the contianer. You would need to expose a port to connect with the docker port.
+#To run the container. You would need to expose a port to connect with the docker port.
 #In this case I am using 8080 for both.
-docker run -p 8080:8080 -it mellijoaco/describer bash       
+docker run -p 8080:8080 -it mellijoaco/describer bash   
+
+#run the flask app
+pyghon3 main.py
 ```
 
 ## GCR
 You can also create an Image and upload this one to the Google Clour Repository (GCR). 
 You can deploy this image using the Cloud Run Services and it will be executed as a docker container in a VM.
-To do this you will need to have an `app.py` file.
+To do this you will need to have an `app.py` file. 
 
 You would need to enable certaing options.
 

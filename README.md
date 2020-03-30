@@ -1,5 +1,5 @@
 # Cloud_Computing_Project_2
-## Docker Container Project
+## Example of Docker containerization
 
 This is a tutorial of how to use Docker containerization. You can see a quick demostration [here.](https://youtu.be/0v3HIwOZ064)
 

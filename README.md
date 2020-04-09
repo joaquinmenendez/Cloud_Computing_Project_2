@@ -6,7 +6,7 @@ This is a tutorial of how to use Docker containerization. You can see a quick de
 **Previous projects**<br>
 - [Continuous Delivery of Flask Application on GCP](https://github.com/joaquinmenendez/Cloud_Computing_Project_1)<br>
 **Next projects**<br>
-- [Using Google Cloud Services to develop a Serverless Data Engineering Pipeline](https://github.com/joaquinmenendez/Cloud_Computing_Project_4)
+- [Using Google Cloud Functions to develop a Serverless Data Engineering Pipeline](https://github.com/joaquinmenendez/Cloud_Computing_Project_4)
 -  [Submitting a ML and Descriptive analysis to a Spark cluster on GCP](https://github.com/joaquinmenendez/Cloud_Computing_Project_3)<br>
 
 

@@ -202,10 +202,10 @@ You would need to enable certaing options.
 ![enable_options](https://user-images.githubusercontent.com/43391630/75631313-b1e9eb80-5bbf-11ea-849d-bac67488b5be.png)
 
 ```bash
-#this would take some time
-cloud builds submit --tag gcr.io/carbon-zone-269620/describer
-
-#gcloud run deploy --image gcr.io/PROJECT_ID/name --platform managed
+#This would take some time
+#gcloud run deploy --image gcr.io/PROJECT_ID/name 
+gcloud builds submit --tag gcr.io/carbon-zone-269620/describer
+# Deploy the project
 gcloud run deploy --image gcr.io/carbon-zone-269620/describer --platform managed
 ```
 You can have access to the cloud version [here](https://describer-ions6p5noa-ue.a.run.app)
